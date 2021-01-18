@@ -1,0 +1,50 @@
+// ==========================================================================
+// Settings / Config / Colors
+// ==========================================================================
+
+// Palette
+// =============================================================================
+$white: #FFFFFF;
+$black: #000000;
+
+$accent: #FF0096;
+$accent-2: #00B1DD;
+
+
+$blue: #191C24;
+
+$blue-1: #191C24;
+$blue-2: #4A90E2;
+$blue-3: #00B1DD;
+$blue-4: #DDF8FF;
+$blue-5: #EEFBFF;
+
+$gray-1: #4A4A4A;
+$gray-2: #9B9B9B;
+$gray-3: #EEEEEE;
+
+$footer-bg:  #131123;
+
+// Specific
+// =============================================================================
+// Link
+$link-color:       #1A0DAB;
+$link-focus-color: #1A0DAB;
+$link-hover-color: darken(#1A0DAB, 10%);
+// Selection
+$selection-text-color:       $white;
+$selection-background-color: pink;
+
+// Social Colors
+// =============================================================================
+$facebook-color:  #3B5998;
+$instagram-color: #E1306C;
+$youtube-color:   #CD201F;
+$twitter-color:   #1DA1F2;
+$linkedin-color:  #0077B5;
+
+
+// Customs
+$cursor-color:  $accent;
+$loader-bg: #131123;
+$border-line: rgba(182, 184, 185, 0.29);

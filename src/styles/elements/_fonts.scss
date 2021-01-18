@@ -1,0 +1,49 @@
+// ==========================================================================
+// Base / Fonts
+// ==========================================================================
+
+
+@include font-face(
+    $font-euclid,
+    "../assets/fonts/Euclid/EuclidFlexBold",
+    ("eot", "woff", "ttf", "svg")
+) {
+    font-style:  normal;
+    font-weight: bold;
+    text-rendering: optimizeLegibility;
+};
+
+@include font-face(
+    $font-montserrat,
+    "../assets/fonts/Montserrat/Montserrat-Bold",
+    ("eot", "woff", "ttf", "svg")
+) {
+    font-style:  normal;
+    font-weight: bold;
+    text-rendering: optimizeLegibility;
+};
+
+@include font-face(
+    $font-montserrat,
+    "../assets/fonts/Montserrat/Montserrat-SemiBold",
+    ("eot", "woff", "ttf", "svg")
+) {
+    font-style:  normal;
+    font-weight: 600;
+    text-rendering: optimizeLegibility;
+};
+
+@include font-face(
+    $font-montserrat,
+    "../assets/fonts/Montserrat/Montserrat-Regular",
+    ("eot", "woff", "ttf", "svg")
+) {
+    font-style:  normal;
+    font-weight: normal;
+    text-rendering: optimizeLegibility;
+}
+
+@include font-face($font-icon, "../assets/fonts/custom-icons/custom-icons", ("eot", "woff2", "woff", "ttf")) {
+    font-style: normal;
+    font-weight: normal;
+  }

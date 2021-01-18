@@ -1,0 +1,62 @@
+.o-reveal {
+  &.is-reveal {
+    .o-background {
+      opacity: 1;
+      transition-delay: 0.7s;
+    }
+  }
+
+  .o-background {
+    top: -10%;
+    bottom: -10%;
+    opacity: 0;
+    z-index: 1;
+    transition: opacity 0.6s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+  }
+
+  &__background-reveal {
+    .is-reveal & {
+      transform: translate3d(0, 0, 0);
+      transition-delay: 0s;
+      opacity: 1;
+
+      &.-blur  {
+        transform: translate3d(0, 0, 0) scale(1);
+        transition-delay: 0s;
+        opacity: 1;
+      }
+    }
+
+    &.-blur {
+      filter: blur(50px);
+      transition: transform 0.9s cubic-bezier(0.4, 0, 0.2, 1);
+      transform: translate3d(0, 100%, 0) scale(1);
+      background-size: cover;
+
+    }
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: $gray-3;
+
+    pointer-events: none;
+    opacity: 0;
+    transition: transform 0.9s cubic-bezier(0.4, 0, 0.2, 1);
+    transform: translate3d(0, 100%, 0);
+  }
+}
+
+
+
+
+// <div class="o-reveal" data-scroll data-scroll-class="is-reveal">
+// <div class="o-background" data-scroll data-scroll-speed="-1" data-scroll-position="middle">
+//   <div class="o-background__image-full" data-scroll data-scroll-call="toggleLazy, Scroll, main" data-scroll-lazy="http://com.jobing.static.s3.amazonaws.com/company/sites/155752/assets/images/culture/2.jpg">
+//   </div>
+
+// </div>
+
+// <div class="o-reveal__background-reveal"></div>
+// </div>

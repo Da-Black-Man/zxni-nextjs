@@ -1,0 +1,158 @@
+.o-loader {
+  white-space: nowrap;
+  font-size: 0;
+  text-align: center;
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: 1000;
+  transition: visibility 0s;
+
+  .is-loaded & {
+    visibility: hidden;
+    transition-delay: 0.6s;
+    &::after {
+      transform: scaleY(0);
+      transform-origin: center top;
+
+    }
+  }
+
+  &::before {
+    content: "";
+    display: inline-block;
+    height: 100%;
+    vertical-align: middle;
+  }
+
+  &::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background-color: $loader-bg;
+    transition: transform 0.6s cubic-bezier(0.4, 0, 0.2, 1);
+    transform: scaleY(1);
+    transform-origin: center bottom;
+  }
+
+  &__line {
+    position: relative;
+    z-index: 2;
+    display: inline-block;
+    vertical-align: middle;
+    overflow: hidden;
+    width: 8.4375rem;
+    height: 0.6875rem;
+    transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    transform: scaleX(1);
+    transform-origin: center right;
+
+    &:after {
+      position: absolute;
+      top: 0;
+      right: 0;
+      bottom: 0;
+      left: 0;
+      border-radius: 2px;
+      background-color: #ffffff;
+      content: "";
+      transform: scaleX(0);
+      transform-origin: center left;
+      animation: loading 1.2s cubic-bezier(0.4, 0, 0.2, 1) infinite forwards;
+    }
+
+    .is-loaded & {
+          transition-delay: 0.6s;
+
+      transform: scaleX(0);
+
+    }
+  }
+}
+
+
+
+
+@keyframes loading {
+  0% {
+    transform: translate(0%) scaleX(0);
+  }
+
+  30% {
+    transform: translate(0%) scaleX(1);
+  }
+
+  80% {
+    transform: translate(100%) scaleX(0);
+  }
+
+  100% {
+    transform: translate(100%) scaleX(0);
+  }
+}
+
+
+.o-loader__next {
+  position: absolute;
+  top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+
+  &::before, &::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    transform: scaleX(0);
+    transform-origin: center left;
+    transition: transform .6s cubic-bezier(.4,0,.2,1);
+  }
+
+  &::before {
+ background-color: $loader-bg;
+    transition-delay: .25s;
+    z-index: 1;
+
+    .is-loading & {
+          transform: scaleX(1)
+
+    }
+  }
+  &::after {
+background-color: $loader-bg;
+    transition-delay: .1s;
+    z-index: 3
+  }
+}
+
+
+
+#progressBarContainer {
+    position: fixed;
+    z-index: 9999;
+    // background: rgba(255,255,255,0.05);
+    width: 100%;
+    top: 0;
+    left: 0;
+}
+  
+  
+#progressBar {
+    background: linear-gradient(to left, $accent-2, $accent);
+    transform-origin: top left;
+    transform: scale(0,0);
+    opacity: 0;
+}
+
+#progressBarContainer,
+#progressBar {
+    height: 5px;
+}

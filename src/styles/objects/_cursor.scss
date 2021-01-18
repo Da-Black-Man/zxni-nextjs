@@ -1,0 +1,49 @@
+.has-custom-cursor {
+
+  &,
+  a {
+    cursor: none;
+  }
+
+  .o-cursor {
+    opacity: 1;
+  }
+}
+
+
+.o-cursor {
+  html:not(.has-custom-cursor) & {
+    visibility: hidden;
+    opacity: 0;
+  }
+
+
+
+  opacity: 0;
+  transition: opacity .6s $Power1EaseOut 1s;
+
+  &-circle {
+    position: fixed;
+    left: 0;
+    top: 0;
+    pointer-events: none;
+    border-radius: 50%;
+
+    &__outer {
+      width: 30px;
+      height: 30px;
+      border: 1px solid $cursor-color;
+      z-index: 12000;
+      opacity: 0.2;
+    }
+
+    &__inner {
+      width: 6px;
+      height: 6px;
+      left: -3.5px;
+      top: -3.5px;
+      z-index: 11000;
+      background: $cursor-color;
+    }
+  }
+}
