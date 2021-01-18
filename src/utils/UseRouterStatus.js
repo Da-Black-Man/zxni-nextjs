@@ -1,5 +1,5 @@
-import { useState, useEffect } from "react";
-import Router from "next/router";
+import { useState, useEffect } from 'react';
+import Router from 'next/router';
 
 export default function useRouterStatus() {
   const [isLoading, setIsLoading] = useState(false);
@@ -21,14 +21,14 @@ export default function useRouterStatus() {
       setError(error);
     };
 
-    Router.events.on("routeChangeStart", start);
-    Router.events.on("routeChangeComplete", complete);
-    Router.events.on("routeChangeError", error);
+    Router.events.on('routeChangeStart', start);
+    Router.events.on('routeChangeComplete', complete);
+    Router.events.on('routeChangeError', error);
 
     return () => {
-      Router.events.off("routeChangeStart", start);
-      Router.events.off("routeChangeComplete", complete);
-      Router.events.off("routeChangeError", error);
+      Router.events.off('routeChangeStart', start);
+      Router.events.off('routeChangeComplete', complete);
+      Router.events.off('routeChangeError', error);
     };
   }, []);
 

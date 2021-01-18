@@ -1,24 +1,19 @@
-import "../styles/main.scss";
-import { DefaultSeo } from "next-seo";
-import SEO from "../utils/next-seo.config";
-import Router from "next/router";
-import { useState, useEffect } from "react";
-
-
-
+import '../styles/main.scss';
+import { DefaultSeo } from 'next-seo';
+import Router from 'next/router';
+import { useState, useEffect } from 'react';
+import SEO from '../utils/next-seo.config';
 
 function MyApp({ Component, pageProps }) {
   const [isLoading, setIsLoading] = useState(false);
   const [isError, setIsError] = useState(false);
   const [error, setError] = useState();
 
-  
-
   useEffect(() => {
     const handlePageLoading = () => {
-      document.documentElement.classList.remove("is-loading");
-      document.documentElement.classList.add("is-loaded", "is-ready");
-    }
+      document.documentElement.classList.remove('is-loading');
+      document.documentElement.classList.add('is-loaded', 'is-ready');
+    };
 
     const start = () => {
       setIsLoading(true);
@@ -34,24 +29,29 @@ function MyApp({ Component, pageProps }) {
       setError(error);
     };
 
-    window.addEventListener("load", handlePageLoading);
-    Router.events.on("routeChangeStart", start);
-    Router.events.on("routeChangeComplete", complete);
-    Router.events.on("routeChangeError", error);
+    window.addEventListener('load', handlePageLoading);
+    Router.events.on('routeChangeStart', start);
+    Router.events.on('routeChangeComplete', complete);
+    Router.events.on('routeChangeError', error);
 
     return () => {
-      window.removeEventListener("load", handlePageLoading);
-      Router.events.off("routeChangeStart", start);
-      Router.events.off("routeChangeComplete", complete);
-      Router.events.off("routeChangeError", error);
+      window.removeEventListener('load', handlePageLoading);
+      Router.events.off('routeChangeStart', start);
+      Router.events.off('routeChangeComplete', complete);
+      Router.events.off('routeChangeError', error);
     };
   }, []);
-  
+
   return (
     <>
-      {isLoading ? <h1>Loading...</h1> : 
-      <><DefaultSeo {...SEO} />
-      <Component {...pageProps} /></>}
+      {isLoading ? (
+        <h1>Loading...</h1>
+      ) : (
+        <>
+          <DefaultSeo {...SEO} />
+          <Component {...pageProps} />
+        </>
+      )}
     </>
   );
 }

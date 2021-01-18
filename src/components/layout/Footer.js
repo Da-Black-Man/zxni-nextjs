@@ -1,13 +1,13 @@
-export default () => {
+export default function Footer() {
   return (
     <footer className="c-footer js-section" data-scroll-section>
       <div className="c-footer__content">
         <a className="c-footer-navigation__logo" href="/" target="_blank">
           <svg className="c-footer-navigation__logo--desktop" role="img">
-            <use xlinkHref="#svg-logo"></use>
+            <use xlinkHref="#svg-logo" />
           </svg>
           <svg className="c-footer-navigation__logo--mobile" role="img">
-            <use xlinkHref="#svg-logo"></use>
+            <use xlinkHref="#svg-logo" />
           </svg>
         </a>
         <nav className="c-footer-navigation__nav u-vertical-center">
@@ -60,10 +60,9 @@ export default () => {
             <div className="o-layout__item">
               <div className="c-footer__eeo">
                 <p>
-                  Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                  Ullam, nisi alias similique maxime nihil beatae provident ad
-                  molestiae tempora laudantium ut ducimus, assumenda eum a.
-                  Incidunt accusamus quaerat mollitia ipsum?
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit. Ullam, nisi alias
+                  similique maxime nihil beatae provident ad molestiae tempora laudantium ut
+                  ducimus, assumenda eum a. Incidunt accusamus quaerat mollitia ipsum?
                 </p>
               </div>
             </div>
@@ -92,7 +91,7 @@ export default () => {
         <div className="__back-to-link">
           <div className="__back-to-icon">
             <svg>
-              <use xlinkHref="#svg-arrow-long"></use>
+              <use xlinkHref="#svg-arrow-long" />
             </svg>
           </div>
           <div className="__back-to-label">Back To Top</div>
@@ -100,4 +99,4 @@ export default () => {
       </div>
     </footer>
   );
-};
+}

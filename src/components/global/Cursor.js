@@ -105,8 +105,8 @@ class Cursor extends React.Component {
   render() {
     return (
       <div className="o-cursor">
-        <div className="o-cursor-circle o-cursor-circle__inner"></div>
-        <div className="o-cursor-circle o-cursor-circle__outer"></div>
+        <div className="o-cursor-circle o-cursor-circle__inner" />
+        <div className="o-cursor-circle o-cursor-circle__outer" />
       </div>
     );
   }

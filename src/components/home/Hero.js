@@ -1,10 +1,10 @@
-import React, { useState, useEffect } from "react";
-import heroImage from "../../assets/images/hero.jpg";
-const test =
-  "https://upload.wikimedia.org/wikipedia/commons/3/3f/Fronalpstock_big.jpg";
+import React, { useState, useEffect } from 'react';
+import heroImage from '../../assets/images/hero.jpg';
+
+const test = 'https://upload.wikimedia.org/wikipedia/commons/3/3f/Fronalpstock_big.jpg';
 
 export default function Hero() {
-  const [isActive, setActive] = useState("false");
+  const [isActive, setActive] = useState('false');
 
   const socialClick = (e) => {
     e.preventDefault();
@@ -12,31 +12,25 @@ export default function Hero() {
 
     (async () => {
       try {
-        const TweenMax = (await import("gsap/TweenMax")).default;
+        const TweenMax = (await import('gsap/TweenMax')).default;
         const socialLinks = document.querySelectorAll(
-          ".c-main-hero__social-link:not(.-social-hub)"
+          '.c-main-hero__social-link:not(.-social-hub)'
         );
         socialLinks.forEach(function (item, index) {
-          if (!item.classList.contains("show")) {
-            item.classList.add("show");
+          if (!item.classList.contains('show')) {
+            item.classList.add('show');
             TweenMax.to(item, 0.4, {
               y: (index - 5) * -10,
               autoAlpha: 1,
             });
           } else {
-            TweenMax.staggerTo(
-              socialLinks,
-              0.2,
-              { y: 0, autoAlpha: 0 },
-              0.1,
-              function () {
-                document
-                  .querySelectorAll(".c-main-hero__social-link.show")
-                  .forEach(function (element) {
-                    element.classList.remove("show");
-                  });
-              }
-            );
+            TweenMax.staggerTo(socialLinks, 0.2, { y: 0, autoAlpha: 0 }, 0.1, function () {
+              document
+                .querySelectorAll('.c-main-hero__social-link.show')
+                .forEach(function (element) {
+                  element.classList.remove('show');
+                });
+            });
           }
         });
       } catch (error) {
@@ -56,9 +50,8 @@ export default function Hero() {
                 data-scroll-speed="-1"
                 style={{
                   backgroundImage: `url(${heroImage})`,
-                }}
-              ></div>
-              <div className="c-main-hero__overlay"></div>
+                }}></div>
+              <div className="c-main-hero__overlay" />
             </div>
           </div>
           <div className="c-main-hero__container o-container">
@@ -67,15 +60,14 @@ export default function Hero() {
                 <div className="c-main-hero__content">
                   <h1 className="c-main-hero__title">
                     <span className="c-main-hero__title-inner">
-                      Lorem Ipsum<span className="-period">.</span>
-                      <span className="c-main-hero__title-bg"></span>
+                      Lorem Ipsum
+                      <span className="-period">.</span>
+                      <span className="c-main-hero__title-bg" />
                     </span>
                   </h1>
                   <div className="c-main-hero__subtitle">
                     <div className="c-main-hero__subtitle-content">
-                      <p className="c-main-hero__subtitle-message">
-                        Lore Impsum
-                      </p>
+                      <p className="c-main-hero__subtitle-message">Lore Impsum</p>
                     </div>
                   </div>
                 </div>
@@ -95,7 +87,7 @@ export default function Hero() {
               <div className="scroll-text">Scroll to explore.</div>
               <div className="scroll-arrow">
                 <svg>
-                  <use xlinkHref="#svg-arrow-long"></use>
+                  <use xlinkHref="#svg-arrow-long" />
                 </svg>
               </div>
             </div>
@@ -107,10 +99,9 @@ export default function Hero() {
                   className="c-main-hero__social-link -linkedin"
                   href="/"
                   rel="noopener noreferrer"
-                  target="_blank"
-                >
+                  target="_blank">
                   <svg className="c-main-hero__social-icon" role="img">
-                    <use xlinkHref="#svg-linkedin"></use>
+                    <use xlinkHref="#svg-linkedin" />
                   </svg>
                 </a>
               </li>
@@ -119,10 +110,9 @@ export default function Hero() {
                   className="c-main-hero__social-link -twitter"
                   href="/"
                   rel="noopener noreferrer"
-                  target="_blank"
-                >
+                  target="_blank">
                   <svg className="c-main-hero__social-icon" role="img">
-                    <use xlinkHref="#svg-twitter"></use>
+                    <use xlinkHref="#svg-twitter" />
                   </svg>
                 </a>
               </li>
@@ -131,10 +121,9 @@ export default function Hero() {
                   className="c-main-hero__social-link -facebook"
                   href="/"
                   rel="noopener noreferrer"
-                  target="_blank"
-                >
+                  target="_blank">
                   <svg className="c-main-hero__social-icon" role="img">
-                    <use xlinkHref="#svg-facebook"></use>
+                    <use xlinkHref="#svg-facebook" />
                   </svg>
                 </a>
               </li>
@@ -143,10 +132,9 @@ export default function Hero() {
                   className="c-main-hero__social-link -youtube"
                   href="/"
                   rel="noopener noreferrer"
-                  target="_blank"
-                >
+                  target="_blank">
                   <svg className="c-main-hero__social-icon" role="img">
-                    <use xlinkHref="#svg-youtube"></use>
+                    <use xlinkHref="#svg-youtube" />
                   </svg>
                 </a>
               </li>
@@ -155,23 +143,19 @@ export default function Hero() {
                   className="c-main-hero__social-link -instagram"
                   href="/"
                   rel="noopener noreferrer"
-                  target="_blank"
-                >
+                  target="_blank">
                   <svg className="c-main-hero__social-icon" role="img">
-                    <use xlinkHref="#svg-instagram"></use>
+                    <use xlinkHref="#svg-instagram" />
                   </svg>
                 </a>
               </li>
               <li className="c-main-hero__social-item" id="social-hub">
                 <a
-                  className={`c-main-hero__social-link -social-hub ${
-                    isActive ? "--open" : ""
-                  }`}
+                  className={`c-main-hero__social-link -social-hub ${isActive ? '--open' : ''}`}
                   href="#"
-                  onClick={socialClick}
-                >
+                  onClick={socialClick}>
                   <svg className="c-main-hero__social-icon" role="img">
-                    <use xlinkHref="#svg-social-hub"></use>
+                    <use xlinkHref="#svg-social-hub" />
                   </svg>
                 </a>
               </li>

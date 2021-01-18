@@ -1,7 +1,8 @@
 // next.config.js
-const withImages = require("next-images");
+const withImages = require('next-images');
+
 module.exports = withImages({
-  webpack(config, options) {
+  webpack(config) {
     return config;
   },
 });

@@ -1,8 +1,8 @@
-import Guides from "../global/Guides";
-import Loader from "../global/Loader";
+import Guides from '../global/Guides';
+import Loader from '../global/Loader';
 // import Cursor from "../global/Cursor";
-import Header from "../layout/Header";
-import Footer from "../layout/Footer";
+import Header from './Header';
+import Footer from './Footer';
 
 export default function Page(props) {
   return (
