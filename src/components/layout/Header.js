@@ -1,12 +1,13 @@
+import PropTypes from 'prop-types';
 import ActiveLink from '../global/ActiveLink';
 
-export default function Header(props) {
+const Header = ({ logo }) => {
   return (
     <header className="c-header-navigation u-anime -delay-4" id="main__menu">
       <div className="c-header-navigation__content">
         <a className="c-header-navigation__logo" href="/" target="_blank">
-          <img className="c-header-navigation__logo--desktop" role="img" src={props.logo} />
-          <img className="c-header-navigation__logo--mobile" role="img" src={props.logo} />
+          <img className="c-header-navigation__logo--desktop" alt="logo" src={logo} />
+          <img className="c-header-navigation__logo--mobile" alt="logo" src={logo} />
         </a>
         <nav className="c-header-navigation__nav">
           <ul className="c-header-navigation__list">
@@ -83,4 +84,8 @@ export default function Header(props) {
       <div className="o-overlay" />
     </header>
   );
-}
+};
+Header.propTypes = {
+  logo: PropTypes.string.isRequired,
+};
+export default Header;

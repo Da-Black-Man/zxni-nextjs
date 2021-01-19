@@ -69,7 +69,7 @@ html {
 }
 
 body {
-  background-color: #17152f;
+  background-color: $bg-body;
   .has-scroll-smooth & {
     overflow: hidden;
   }

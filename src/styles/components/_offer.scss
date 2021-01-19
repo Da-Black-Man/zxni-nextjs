@@ -1,0 +1,31 @@
+.c-offer {
+  position: relative;
+  display: block;
+  color: #fff;
+  overflow: hidden;
+
+  &__quote {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    font-family: $font-title;
+    padding: rem(120px) 0;
+    position: relative;
+    &::before {
+      content: '';
+      display: contents;
+      height: 100%;
+      width: rem(3px);
+      background-color: $accent;
+      position: relative;
+    }
+
+    &-text {
+      font-size: rem(42px);
+      em {
+        font-style: normal;
+        color: $accent;
+      }
+    }
+  }
+}
