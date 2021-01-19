@@ -5,11 +5,8 @@
   padding-top: 1rem;
 
   @media (min-width: $from-medium) {
-    padding-top: 0
+    padding-top: 0;
   }
-
-
-
 
   &__content {
     position: relative;
@@ -21,8 +18,8 @@
     z-index: 1;
 
     &::before {
-      content: "";
-      opacity: .5;
+      content: '';
+      opacity: 0.5;
       position: absolute;
       right: 0;
       left: 0;
@@ -33,12 +30,10 @@
       margin: 0 auto;
     }
 
-    @media(min-width: $from-medium) {
+    @media (min-width: $from-medium) {
       height: 9rem;
     }
-
   }
-
 
   &-navigation {
     &__logo {
@@ -54,7 +49,7 @@
         width: 9rem;
       }
 
-      @media(max-width: $to-medium) {
+      @media (max-width: $to-medium) {
         width: 100%;
       }
 
@@ -67,12 +62,12 @@
 
       &--desktop {
         fill: #fff;
-        width: 5.375rem;
-        height: 5.375rem;
+        width: 3.375rem;
+        height: 3.375rem;
         display: none;
 
         @media (min-width: $from-medium) {
-          display: inline-block
+          display: inline-block;
         }
       }
 
@@ -81,9 +76,6 @@
         display: inline-block;
         width: 3.375rem;
         height: 3.375rem;
-        @media (max-width: $to-medium) {
-          width: 100%
-        }
 
         @media (min-width: $from-medium) {
           display: none;
@@ -130,7 +122,6 @@
             transform: scaleX(1);
             transform-origin: center left;
           }
-
         }
       }
     }
@@ -140,21 +131,20 @@
       position: relative;
       display: inline-block;
       padding: 0 1.2vw;
-      font-size: .9375rem;
+      font-size: 0.9375rem;
       text-transform: uppercase;
       font-weight: bold;
 
       &::after {
-        content: "";
+        content: '';
         position: absolute;
         right: 1.125rem;
         bottom: -5px;
         left: 0;
         transform: scaleX(0);
-        transition: transform .3s cubic-bezier(.4, 0, 0, 1);
+        transition: transform 0.3s cubic-bezier(0.4, 0, 0, 1);
         transform-origin: center right;
         border-bottom: 5px solid $accent;
-
       }
 
       &:hover {
@@ -166,27 +156,25 @@
         }
       }
     }
-
   }
 
   &__contact-info {
     color: #fff;
 
     span {
-      font-size: .9375rem;
+      font-size: 0.9375rem;
       font-weight: bold;
     }
 
     p {
       margin: 0 auto;
-      font-size: .9375rem;
+      font-size: 0.9375rem;
     }
 
-    >div {
-      padding: 1.3rem 0
+    > div {
+      padding: 1.3rem 0;
     }
   }
-
 
   &__info {
     position: relative;
@@ -194,22 +182,22 @@
     display: block;
     padding: 2rem 0;
 
-    @media(min-width: $to-medium) {
+    @media (min-width: $to-medium) {
       padding: 0 9rem;
     }
 
     &-layout {
       padding: 0rem;
-      @media(min-width: $from-small) {
+      @media (min-width: $from-small) {
         padding: 0 1rem;
       }
 
-      @media(min-width: $from-medium) {
-        padding: 1rem 0rem
+      @media (min-width: $from-medium) {
+        padding: 1rem 0rem;
       }
 
       .o-layout__item {
-        @media(min-width: $from-medium) {
+        @media (min-width: $from-medium) {
           width: 50%;
         }
       }
@@ -217,12 +205,11 @@
   }
 
   &__social {
-
     display: flex;
     align-items: center;
     justify-content: flex-end;
 
-    @media(max-width: $to-medium) {
+    @media (max-width: $to-medium) {
       padding: 2rem 0;
       justify-content: center;
     }
@@ -230,9 +217,8 @@
     &__item {
       margin-left: 1rem;
       @include first-child() {
-        margin-left: 0
+        margin-left: 0;
       }
-
     }
 
     &-link {
@@ -250,7 +236,7 @@
       &.-twitter {
         &:hover {
           svg {
-            fill: $twitter-color
+            fill: $twitter-color;
           }
         }
       }
@@ -258,7 +244,7 @@
       &.-linkedin {
         &:hover {
           svg {
-            fill: $linkedin-color
+            fill: $linkedin-color;
           }
         }
       }
@@ -266,7 +252,7 @@
       &.-facebook {
         &:hover {
           svg {
-            fill: $facebook-color
+            fill: $facebook-color;
           }
         }
       }
@@ -274,7 +260,7 @@
       &.-youtube {
         &:hover {
           svg {
-            fill: $youtube-color
+            fill: $youtube-color;
           }
         }
       }
@@ -282,12 +268,10 @@
       &.-instagram {
         &:hover {
           svg {
-            fill: $instagram-color
+            fill: $instagram-color;
           }
         }
       }
-
-
     }
 
     &-icon {
@@ -302,7 +286,7 @@
     color: #fff;
 
     a {
-      color: $accent
+      color: $accent;
     }
   }
 
@@ -311,8 +295,8 @@
     color: #fff;
     padding: 2rem 0;
     &:before {
-      content: "";
-      opacity: .5;
+      content: '';
+      opacity: 0.5;
       position: absolute;
       right: 0;
       left: 0;
@@ -325,12 +309,12 @@
 
     &-layout {
       padding: 0rem;
-      @media(min-width: $from-small) {
+      @media (min-width: $from-small) {
         padding: 0 1rem;
       }
 
-      @media(min-width: $from-medium) {
-        padding: 0
+      @media (min-width: $from-medium) {
+        padding: 0;
       }
     }
 
@@ -340,23 +324,22 @@
   }
 
   &__license {
-    @media(min-width: $from-medium) {
+    @media (min-width: $from-medium) {
       width: 75%;
     }
   }
 
   &__site-by {
-    @media(min-width: $from-medium) {
+    @media (min-width: $from-medium) {
       width: 25%;
     }
   }
-
 }
 
 .__back-to {
   display: none;
 
-  @media(min-width: $from-medium) {
+  @media (min-width: $from-medium) {
     opacity: 0;
     top: 25%;
     right: 0;
@@ -384,7 +367,6 @@
           svg {
             fill: $accent;
           }
-
         }
 
         .__back-to-label {
@@ -392,8 +374,6 @@
           transform: translateX(-10px);
         }
       }
-
-
     }
 
     .__back-to-icon {

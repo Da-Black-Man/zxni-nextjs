@@ -1,16 +1,12 @@
 import ActiveLink from '../global/ActiveLink';
 
-export default function Header() {
+export default function Header(props) {
   return (
     <header className="c-header-navigation u-anime -delay-4" id="main__menu">
       <div className="c-header-navigation__content">
         <a className="c-header-navigation__logo" href="/" target="_blank">
-          <svg className="c-header-navigation__logo--desktop" role="img">
-            <use xlinkHref="#svg-logo" />
-          </svg>
-          <svg className="c-header-navigation__logo--mobile" role="img">
-            <use xlinkHref="#svg-logo" />
-          </svg>
+          <img className="c-header-navigation__logo--desktop" role="img" src={props.logo} />
+          <img className="c-header-navigation__logo--mobile" role="img" src={props.logo} />
         </a>
         <nav className="c-header-navigation__nav">
           <ul className="c-header-navigation__list">

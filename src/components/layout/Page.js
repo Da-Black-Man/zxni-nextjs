@@ -3,6 +3,7 @@ import Loader from '../global/Loader';
 // import Cursor from "../global/Cursor";
 import Header from './Header';
 import Footer from './Footer';
+import logo from '../../assets/images/logo.png';
 
 export default function Page(props) {
   return (
@@ -10,11 +11,11 @@ export default function Page(props) {
       <Loader />
       {/* <div className="o-loader__next"></div> */}
       {/* <Cursor /> */}
-      <Header />
+      <Header logo={logo} />
       <div className="o-scroll">
         <div className="o-wrap">
           {props.children}
-          <Footer />
+          <Footer logo={logo} />
         </div>
       </div>
       <Guides />

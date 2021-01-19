@@ -1,14 +1,10 @@
-export default function Footer() {
+export default function Footer(props) {
   return (
     <footer className="c-footer js-section" data-scroll-section>
       <div className="c-footer__content">
         <a className="c-footer-navigation__logo" href="/" target="_blank">
-          <svg className="c-footer-navigation__logo--desktop" role="img">
-            <use xlinkHref="#svg-logo" />
-          </svg>
-          <svg className="c-footer-navigation__logo--mobile" role="img">
-            <use xlinkHref="#svg-logo" />
-          </svg>
+          <img className="c-footer-navigation__logo--desktop" role="img" src={props.logo} />
+          <img className="c-footer-navigation__logo--mobile" role="img" src={props.logo} />
         </a>
         <nav className="c-footer-navigation__nav u-vertical-center">
           <div>

@@ -66,12 +66,12 @@
   width: 100%;
   height: 100%;
   opacity: 0.45;
-  background-color: #000;
+  background-color: $dark-bg;
 
   pointer-events: none;
 
   @media (min-width: $to-tiny) {
-    background-color: #000;
+    background-color: $dark-bg;
     mix-blend-mode: multiply;
   }
 }
@@ -249,9 +249,10 @@
   width: 100%;
   padding: 3rem;
 
-  @media (min-width: $from-medium) {
+  @media (min-width: $from-large) {
     width: 50%;
-    padding: 3rem;
+    padding: 5rem;
+    max-width: calc(100% - 18rem);
   }
 
   &::before {
@@ -264,7 +265,10 @@
     width: 100%;
     z-index: -1;
     height: 100%;
-    background-color: rgba(0, 51, 89, 0.3);
+    background: url('../../assets/images/stack.svg'), rgba($bg, 1);
+    background-repeat: no-repeat;
+    background-position: 90% center;
+    background-size: rem(200px);
   }
 
   &-content {
