@@ -11,17 +11,24 @@
     font-family: $font-title;
     padding: rem(120px) 0;
     position: relative;
-    &::before {
-      content: '';
-      display: contents;
-      height: 100%;
-      width: rem(3px);
-      background-color: $accent;
-      position: relative;
-    }
 
     &-text {
       font-size: rem(42px);
+      position: relative;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      &::before {
+        content: '';
+        display: block;
+        height: 100%;
+        width: rem(3px);
+        background-color: $accent;
+        position: relative;
+        border-radius: rem(3px);
+        margin-right: rem(30px);
+      }
+
       em {
         font-style: normal;
         color: $accent;
