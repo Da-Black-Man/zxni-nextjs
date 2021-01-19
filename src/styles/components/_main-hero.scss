@@ -1,7 +1,7 @@
 .c-main-hero {
   position: relative;
-  background-color: $blue-1;
-  height: 50vh;
+  background-color: $dark-bg;
+  height: 80vh;
   overflow: hidden;
   transition: height 0.3s ease-in-out;
   user-select: none;
@@ -107,8 +107,7 @@
 
   font-family: $font-title;
 
-  transition: background-color 0.6s linear,
-    opacity 0.6s cubic-bezier(0.25, 0.46, 0.45, 0.94),
+  transition: background-color 0.6s linear, opacity 0.6s cubic-bezier(0.25, 0.46, 0.45, 0.94),
     transform 0.6s cubic-bezier(0.25, 0.46, 0.45, 0.94);
 
   margin: 0 auto;
@@ -116,9 +115,10 @@
   width: 100%;
   position: relative;
   font-weight: bold;
+  text-transform: none;
 
   opacity: 0;
-  line-height: 1;
+  line-height: normal;
   font-size: 8.5836909871vw;
 
   @media (min-width: $from-small) and (max-width: $to-medium) {
@@ -126,7 +126,7 @@
   }
 
   @media (min-width: $from-medium) {
-    font-size: 6.254343294vw;
+    font-size: 4.254343294vw;
   }
 
   &--em {
@@ -136,7 +136,7 @@
     letter-spacing: 1px;
     font-size: 12px;
     line-height: normal;
-    color: $blue-4;
+    color: $accent;
     display: block;
     margin-bottom: rem(15px);
   }
@@ -145,11 +145,10 @@
 .c-main-hero__title-inner {
   position: relative;
   display: block;
-            clip-path: polygon(0 0, 100% 0, 100% 0, 0 0);
-            transition: clip-path .8s cubic-bezier(1, 0, 0, 1) 1s;
-            
+  clip-path: polygon(0 0, 100% 0, 100% 0, 0 0);
+  transition: clip-path 0.8s cubic-bezier(1, 0, 0, 1) 1s;
+
   .is-loaded & {
-  
     clip-path: polygon(0 0, 100% 0, 100% 180%, 0 180%);
   }
 
@@ -158,32 +157,31 @@
   }
 
   .-period {
-    color: $blue-3;
+    color: $accent;
   }
 }
 
- .c-main-hero__title-bg {
-              .is-loaded & {
-                height: 0
-              }
+.c-main-hero__title-bg {
+  .is-loaded & {
+    height: 0;
+  }
 
-              background-color: #fff;
-              position: absolute;
-              bottom: 0;
-              left: 50%;
-              width: 200vw;
-              -webkit-transform: translateX(-50%);
-              -ms-transform: translateX(-50%);
-              transform: translateX(-50%);
-              z-index: 1;
-              -webkit-transform-origin: center bottom;
-              -ms-transform-origin: center bottom;
-              transform-origin: center bottom;
-              height: 100%;
-              -webkit-transition: height .6s cubic-bezier(1, 0, 0, 1) 1.8s;
-              transition: height .6s cubic-bezier(1, 0, 0, 1) 1.8s
-            }
-
+  background-color: #fff;
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  width: 200vw;
+  -webkit-transform: translateX(-50%);
+  -ms-transform: translateX(-50%);
+  transform: translateX(-50%);
+  z-index: 1;
+  -webkit-transform-origin: center bottom;
+  -ms-transform-origin: center bottom;
+  transform-origin: center bottom;
+  height: 100%;
+  -webkit-transition: height 0.6s cubic-bezier(1, 0, 0, 1) 1.8s;
+  transition: height 0.6s cubic-bezier(1, 0, 0, 1) 1.8s;
+}
 
 .c-main-hero__link {
   @media (min-width: $from-medium) {
@@ -212,14 +210,14 @@
   transition-timing-function: cubic-bezier(0.19, 1, 0.22, 1);
   display: block;
 
-  @media (min-width: $from-medium) {
+  @media (min-width: $from-large) {
     width: 50%;
   }
 
   &-content {
     color: #fff;
     margin: 0;
-    font-size: rem(34px);
+    font-size: rem(24px);
   }
 
   &-message {
@@ -233,19 +231,17 @@
 }
 
 .c-main-hero__blurb {
-
   .is-loaded & {
     opacity: 1;
-    transform: translateY(0%)
+    transform: translateY(0%);
   }
 
   opacity: 0;
   transform: translateY(100%);
-  transition: opacity,
-  transform;
-  transition-duration: .6s;
+  transition: opacity, transform;
+  transition-duration: 0.6s;
   transition-delay: 2s;
-  transition-timing-function: cubic-bezier(.19, 1, .22, 1);
+  transition-timing-function: cubic-bezier(0.19, 1, 0.22, 1);
   display: block;
   position: absolute;
   bottom: 0;
@@ -253,10 +249,9 @@
   width: 100%;
   padding: 3rem;
 
-  @media(min-width: $from-medium) {
+  @media (min-width: $from-medium) {
     width: 50%;
-    padding: 5rem;
-
+    padding: 3rem;
   }
 
   &::before {
@@ -276,16 +271,28 @@
     color: #fff;
     margin: 0;
     font-size: 1.3rem;
-    text-align: center;
+  }
+  &-title {
+    font-family: $font-euclid;
+    font-size: rem(28px);
+    position: relative;
 
+    &:after {
+      content: '';
+      display: block;
+      margin: rem(10px) 0;
+      width: rem(70px);
+      background-color: $accent;
+      height: rem(3px);
+      border-radius: 10px;
+    }
+  }
 
-
-
-
+  &-text {
+    margin-top: rem(30px);
+    font-size: rem(16px);
   }
 }
-
-
 
 .c-main-hero__social {
   display: none;
@@ -467,10 +474,8 @@
     margin: 1px 0 0;
     white-space: nowrap;
     line-height: 43px;
-    -webkit-transition: transform 1.2s cubic-bezier(0.77, 0, 0.175, 1),
-      opacity 0.3s ease-in-out;
-    transition: transform 1.2s cubic-bezier(0.77, 0, 0.175, 1),
-      opacity 0.3s ease-in-out;
+    -webkit-transition: transform 1.2s cubic-bezier(0.77, 0, 0.175, 1), opacity 0.3s ease-in-out;
+    transition: transform 1.2s cubic-bezier(0.77, 0, 0.175, 1), opacity 0.3s ease-in-out;
   }
 }
 
@@ -479,10 +484,8 @@
     position: relative;
     float: left;
     pointer-events: none;
-    -webkit-transition: transform 1.2s cubic-bezier(0.77, 0, 0.175, 1),
-      opacity 0.3s ease-in-out;
-    transition: transform 1.2s cubic-bezier(0.77, 0, 0.175, 1),
-      opacity 0.3s ease-in-out;
+    -webkit-transition: transform 1.2s cubic-bezier(0.77, 0, 0.175, 1), opacity 0.3s ease-in-out;
+    transition: transform 1.2s cubic-bezier(0.77, 0, 0.175, 1), opacity 0.3s ease-in-out;
     margin: 0 0 0 18px;
     width: 20px;
     height: 30px;
@@ -503,13 +506,11 @@
     border-top-right-radius: 20px;
     border-bottom-left-radius: 20px;
     border-bottom-right-radius: 20px;
-    border: 2px solid $blue-3;
+    border: 2px solid $accent;
     border-bottom: 2px solid transparent;
-    border-top: 2px solid $blue-3;
-    -webkit-transition: transform 1.2s cubic-bezier(0.77, 0, 0.175, 1),
-      opacity 0.3s ease-in-out;
-    transition: transform 1.2s cubic-bezier(0.77, 0, 0.175, 1),
-      opacity 0.3s ease-in-out;
+    border-top: 2px solid $accent;
+    -webkit-transition: transform 1.2s cubic-bezier(0.77, 0, 0.175, 1), opacity 0.3s ease-in-out;
+    transition: transform 1.2s cubic-bezier(0.77, 0, 0.175, 1), opacity 0.3s ease-in-out;
     -webkit-transform: rotate(90deg);
     -moz-transform: rotate(90deg);
     -ms-transform: rotate(90deg);

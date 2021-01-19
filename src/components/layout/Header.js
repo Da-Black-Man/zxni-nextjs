@@ -16,13 +16,28 @@ export default function Header() {
           <ul className="c-header-navigation__list">
             <li className="c-header-navigation__item">
               <ActiveLink href="/" activeClassName="active">
-                <a className="c-header-navigation__link">Home</a>
+                <a className="c-header-navigation__link">Our Offer</a>
               </ActiveLink>
             </li>
             <li className="c-header-navigation__item">
               <ActiveLink href="/example" activeClassName="active">
-                <a className="c-header-navigation__link">Page</a>
+                <a className="c-header-navigation__link">Why UT</a>
               </ActiveLink>
+            </li>
+            <li className="c-header-navigation__item">
+              <a href="#" className="c-header-navigation__link">
+                Bridging the Gap
+              </a>
+            </li>
+            <li className="c-header-navigation__item">
+              <a href="#" className="c-header-navigation__link -cta-btn">
+                Contact
+                <span className="c-header-navigation__link-icon o-button__icon">
+                  <svg>
+                    <use xlinkHref="#svg-contact" />
+                  </svg>
+                </span>
+              </a>
             </li>
           </ul>
         </nav>

@@ -20,7 +20,7 @@ html {
 
   &:not(.has-scroll-init) {
     cursor: wait;
-    overflow: hidden;
+    // overflow: hidden;
   }
 
   &.has-scroll-smooth {

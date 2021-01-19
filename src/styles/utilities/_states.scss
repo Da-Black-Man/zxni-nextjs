@@ -5,16 +5,16 @@
 /**
  * ARIA roles display visual cursor hints
  */
-[aria-busy="true"] {
-    cursor: progress;
+[aria-busy='true'] {
+  cursor: progress;
 }
 
 [aria-controls] {
-    cursor: pointer;
+  cursor: pointer;
 }
 
 [aria-disabled] {
-    cursor: default;
+  cursor: default;
 }
 
 /**
@@ -22,13 +22,13 @@
  */
 
 .is-visible {
-    visibility: visible !important;
-    opacity: 1 !important;
+  visibility: visible !important;
+  opacity: 1 !important;
 }
 
 .is-invisible {
-    visibility: hidden !important;
-    opacity: 0 !important;
+  visibility: hidden !important;
+  opacity: 0 !important;
 }
 
 /**
@@ -36,19 +36,19 @@
  */
 
 .is-hidden {
-    @include u-hidden;
+  @include u-hidden;
 }
 
 @media not print {
-    .is-hidden\@screen {
-        @include u-hidden;
-    }
+  .is-hidden\@screen {
+    @include u-hidden;
+  }
 }
 
 @media print {
-    .is-hidden\@print {
-        @include u-hidden;
-    }
+  .is-hidden\@print {
+    @include u-hidden;
+  }
 }
 
 // .is-hidden\@to-large {
@@ -86,37 +86,34 @@
 
 .is-loaded {
   &.has-scrolled {
-
     .c-header-navigation__nav,
     .c-header-navigation__logo,
     .c-main-hero__social,
     .__scroll {
       opacity: 0;
       visibility: hidden;
-      transition: .5s;
+      transition: 0.5s;
       transform: translateY(-30px);
     }
 
     .c-header-navigation__content::before {
       opacity: 0;
-      transition: .5s;
+      transition: 0.5s;
     }
 
     .c-header-navigation__menu {
-      @media(min-width:$from-tiny) {
-        background-color: $blue-1
+      @media (min-width: $from-tiny) {
+        background-color: $dark-bg;
       }
     }
 
     .c-header-navigation__button::before {
       opacity: 1;
     }
-
-
   }
 
   &.has-nav {
-      .__line {
+    .__line {
       opacity: 0;
     }
   }
@@ -126,7 +123,7 @@
       opacity: 1;
       transform: translateY(-30px);
     }
-      .__line {
+    .__line {
       opacity: 1;
     }
   }
@@ -137,6 +134,7 @@
   .__back-to,
   .c-main-hero__social,
   .__scroll {
-    transition: background-color 0.6s linear, opacity 0.6s cubic-bezier(0.25, 0.46, 0.45, 0.94) 0.3s, transform 0.6s cubic-bezier(0.25, 0.46, 0.45, 0.94) 0.3s;
+    transition: background-color 0.6s linear, opacity 0.6s cubic-bezier(0.25, 0.46, 0.45, 0.94) 0.3s,
+      transform 0.6s cubic-bezier(0.25, 0.46, 0.45, 0.94) 0.3s;
   }
 }

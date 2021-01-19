@@ -60,24 +60,47 @@ export default function Hero() {
                 <div className="c-main-hero__content">
                   <h1 className="c-main-hero__title">
                     <span className="c-main-hero__title-inner">
-                      Lorem Ipsum
-                      <span className="-period">.</span>
+                      Welcome to <br /> Ultimate Tournament<span className="-period">.</span>
                       <span className="c-main-hero__title-bg" />
                     </span>
                   </h1>
                   <div className="c-main-hero__subtitle">
                     <div className="c-main-hero__subtitle-content">
-                      <p className="c-main-hero__subtitle-message">Lore Impsum</p>
+                      <p className="c-main-hero__subtitle-message">
+                        The Premiere USA Based Turnkey eSports Betting Platform
+                      </p>
                     </div>
                   </div>
                 </div>
               </div>
               <div className="c-main-hero__blurb">
                 <div className="c-main-hero__blurb-content">
-                  <span className="c-main-hero__blurb-title">
-                    Lorem
-                    <br /> Ipsum
-                  </span>
+                  <h3 className="c-main-hero__blurb-title">Want to help?</h3>
+                  <p className="c-main-hero__blurb-text">
+                    View our pitch deck and reach out to us below!
+                  </p>
+                  <div className="deux">
+                    <a className="o-button" href="#">
+                      <span className="o-button__inner">
+                        <span className="o-button__label">Pitch Deck</span>
+                        <span className="o-button__icon">
+                          <svg>
+                            <use xlinkHref="#svg-download"></use>
+                          </svg>
+                        </span>
+                      </span>
+                    </a>
+                    <a className="o-button" href="#">
+                      <span className="o-button__inner">
+                        <span className="o-button__label">White Pages</span>
+                        <span className="o-button__icon">
+                          <svg>
+                            <use xlinkHref="#svg-download"></use>
+                          </svg>
+                        </span>
+                      </span>
+                    </a>
+                  </div>
                 </div>
               </div>
             </div>
