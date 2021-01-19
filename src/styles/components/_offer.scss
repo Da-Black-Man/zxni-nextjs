@@ -4,6 +4,19 @@
   color: #fff;
   overflow: hidden;
 
+  &::before {
+    content: '';
+    display: block;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-image: url('../../assets/images/grid.svg');
+    background-repeat: no-repeat;
+    background-position: right center;
+    background-size: 50%;
+    opacity: 0.3;
+  }
+
   &__quote {
     width: 100%;
     display: flex;
