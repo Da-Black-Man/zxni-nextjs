@@ -50,7 +50,8 @@ export default function Hero() {
                 data-scroll-speed="-1"
                 style={{
                   backgroundImage: `url(${heroImage})`,
-                }}></div>
+                }}>
+              </div>
               <div className="c-main-hero__overlay" />
             </div>
           </div>
@@ -60,7 +61,10 @@ export default function Hero() {
                 <div className="c-main-hero__content">
                   <h1 className="c-main-hero__title">
                     <span className="c-main-hero__title-inner">
-                      Welcome to <br /> Ultimate Tournament<span className="-period">.</span>
+                      Welcome to <br />
+{' '}
+Ultimate Tournament
+<span className="-period">.</span>
                       <span className="c-main-hero__title-bg" />
                     </span>
                   </h1>
@@ -85,7 +89,7 @@ export default function Hero() {
                         <span className="o-button__label">Pitch Deck</span>
                         <span className="o-button__icon">
                           <svg>
-                            <use xlinkHref="#svg-download"></use>
+                            <use xlinkHref="#svg-download" />
                           </svg>
                         </span>
                       </span>
@@ -95,7 +99,7 @@ export default function Hero() {
                         <span className="o-button__label">White Pages</span>
                         <span className="o-button__icon">
                           <svg>
-                            <use xlinkHref="#svg-download"></use>
+                            <use xlinkHref="#svg-download" />
                           </svg>
                         </span>
                       </span>

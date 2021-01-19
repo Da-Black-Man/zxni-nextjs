@@ -1,10 +1,12 @@
-export default function Footer(props) {
+import PropTypes from 'prop-types';
+
+const Footer = ({ logo }) => {
   return (
     <footer className="c-footer js-section" data-scroll-section>
       <div className="c-footer__content">
         <a className="c-footer-navigation__logo" href="/" target="_blank">
-          <img className="c-footer-navigation__logo--desktop" role="img" src={props.logo} />
-          <img className="c-footer-navigation__logo--mobile" role="img" src={props.logo} />
+          <img className="c-footer-navigation__logo--desktop" alt="logo" src={logo} />
+          <img className="c-footer-navigation__logo--mobile" alt="logo" src={logo} />
         </a>
         <nav className="c-footer-navigation__nav u-vertical-center">
           <div>
@@ -95,4 +97,8 @@ export default function Footer(props) {
       </div>
     </footer>
   );
-}
+};
+Footer.propTypes = {
+  logo: PropTypes.string.isRequired,
+};
+export default Footer;
