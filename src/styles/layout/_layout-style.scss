@@ -1,0 +1,9 @@
+.l-layout {
+  &__content {
+    &-title {
+      font-family: $font-title;
+      display: block;
+      font-size: rem(36px);
+    }
+  }
+}
