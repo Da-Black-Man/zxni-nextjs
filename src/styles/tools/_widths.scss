@@ -91,5 +91,13 @@ $breakpoint-delimiter: \@ !default;
         }
       }
     }
+
+    @media only screen and (min-width: $from-large) {
+      @for $numerator from 1 through $denominator {
+        .u-#{$numerator}#{$fractions-delimiter}#{$denominator}#{$breakpoint}\@large {
+          width: ($numerator / $denominator) * 100% $important;
+        }
+      }
+    }
   }
 }

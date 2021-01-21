@@ -68,7 +68,7 @@
   }
 
   &.-flex {
-    @media (min-width: $from-medium) {
+    @media (min-width: $from-large) {
       display: flex;
 
       &.-top {

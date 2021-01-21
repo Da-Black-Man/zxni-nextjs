@@ -5,8 +5,9 @@
   overflow: hidden;
   transition: height 0.3s ease-in-out;
   user-select: none;
+  min-height: 760px;
 
-  @media (max-device-width: $from-tiny) {
+  @media (max-width: $from-tiny) {
     height: 100vh;
     min-height: 760px;
   }
