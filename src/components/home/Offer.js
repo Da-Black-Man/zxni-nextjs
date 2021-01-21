@@ -1,3 +1,7 @@
+import phoneOne from '../../assets/images/phone-1.png';
+import coinOne from '../../assets/images/ut-coin01.png';
+import coinTwo from '../../assets/images/ut-coin02.png';
+
 const Offer = () => {
   return (
     <section data-compontent="offer">
@@ -12,9 +16,30 @@ const Offer = () => {
           <div className="c-offer-main">
             <div className="c-offer-main__inner">
               <div className="o-layout -flex -middle">
-                <div className="o-layout__item u-1/1@medium u-2/5@large">yo</div>
+                <div className="o-layout__item u-1/1@medium u-2/5@large">
+                  <div className="c-offer-phone">
+                    <div className="c-offer-phone__image-wrap">
+                      <img className="c-offer-phone__image" alt="phone" src={phoneOne} />
+                    </div>
+
+                    <div className="c-offer-phone__image-content">
+                      <p className="c-offer-phone__image-text">
+                        22 ESports
+                        <span>Play by Play Betting</span>
+                      </p>
+                    </div>
+                  </div>
+                </div>
                 <div className="o-layout__item u-1/1@medium u-3/5@large">
                   <div className="c-offer-main__content l-layout__content -right">
+                    <div className="c-offer-main__coin -double">
+                      <div
+                        className="c-offer-main__coin-image"
+                        style={{
+                          backgroundImage: `url(${coinTwo})`,
+                        }}
+                      />
+                    </div>
                     <div className="c-offer-main__content-inner l-layout__content-inner">
                       <h2 className="l-layout__content-title">Our Offer</h2>
                       <p className="l-layout__content-text">
@@ -37,6 +62,14 @@ const Offer = () => {
                   </div>
                 </div>
               </div>
+            </div>
+            <div className="c-offer-main__coin -single">
+              <div
+                className="c-offer-main__coin-image"
+                style={{
+                  backgroundImage: `url(${coinOne})`,
+                }}
+              />
             </div>
           </div>
         </div>

@@ -5,6 +5,37 @@
   overflow: hidden;
   z-index: 2;
 
+  &-main {
+    display: block;
+    position: relative;
+
+    &__coin {
+      position: absolute;
+      width: rem(250px);
+      height: rem(200px);
+      z-index: 4;
+
+      &.-single {
+        right: -9rem;
+        bottom: 0;
+      }
+      &.-double {
+        top: -7rem;
+        left: -44rem;
+      }
+
+      &-image {
+        position: absolute;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        background-position: center center;
+        background-size: cover;
+      }
+    }
+  }
+
   &__quote {
     width: 100%;
     display: flex;
@@ -52,6 +83,20 @@
         font-style: normal;
         color: $accent;
         display: contents;
+      }
+    }
+  }
+
+  &-phone {
+    position: relative;
+    z-index: 2;
+    &__image {
+      left: -6rem;
+      position: relative;
+      &-wrap {
+        position: relative;
+        left: -9rem;
+        width: calc(100% + 18rem);
       }
     }
   }
