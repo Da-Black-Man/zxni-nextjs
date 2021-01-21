@@ -12,10 +12,10 @@ const Offer = () => {
           <div className="c-offer-main">
             <div className="c-offer-main__inner">
               <div className="o-layout -flex -middle">
-                <div className="o-layout__item u-1/1 u-1/2@medium">yo</div>
-                <div className="o-layout__item u-1/1 u-1/2@medium">
-                  <div className="c-offer-main__content">
-                    <div className="c-offer-main__content-inner l-layout__content-inner -right">
+                <div className="o-layout__item u-1/1 u-2/5@medium">yo</div>
+                <div className="o-layout__item u-1/1 u-3/5@medium">
+                  <div className="c-offer-main__content l-layout__content -right">
+                    <div className="c-offer-main__content-inner l-layout__content-inner">
                       <h2 className="l-layout__content-title">Our Offer</h2>
                       <p className="l-layout__content-text">
                         We are working to build Ultimate Tournament into the premiere eSports

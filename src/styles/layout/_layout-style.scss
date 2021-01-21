@@ -1,5 +1,43 @@
 .l-layout {
   &__content {
+    position: relative;
+    z-index: 1;
+
+    &::before {
+      @media (min-width: $from-large) {
+        content: '';
+        position: absolute;
+        display: block;
+        background-color: $bg;
+        width: calc(100% + 27rem);
+        height: 100%;
+        z-index: -1;
+        top: 0;
+        right: 0;
+        border-radius: 10px 0 0 10px;
+      }
+    }
+
+    &.-right {
+      @media (min-width: $from-large) {
+        right: -9rem;
+      }
+    }
+
+    &-inner {
+      color: #fff;
+      margin-right: 2rem;
+      margin-left: 2rem;
+      padding: 5rem 0;
+      @media (min-width: $from-large) {
+        margin: 0;
+        width: calc(100% - 9rem);
+        padding: 5rem 0;
+        // width: 100%;
+        // margin-left: -9rem;
+        // padding-right: 0;
+      }
+    }
     &-title {
       font-family: $font-title;
       display: block;
