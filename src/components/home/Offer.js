@@ -1,6 +1,7 @@
 import phoneOne from '../../assets/images/phone-1.png';
 import coinOne from '../../assets/images/ut-coin01.png';
 import coinTwo from '../../assets/images/ut-coin02.png';
+import imageOne from '../../assets/images/image-1.jpg';
 
 const Offer = () => {
   return (
@@ -70,6 +71,61 @@ const Offer = () => {
                   backgroundImage: `url(${coinOne})`,
                 }}
               />
+            </div>
+          </div>
+          <div className="c-offer-count">
+            <div className="c-offer-count__list">
+              <div className="c-offer-count__list-item">
+                <div className="c-offer-count__content">
+                  <span className="c-offer-count__title l-layout__content-title">3,0000</span>
+                  <p className="c-offer-count__text">Matches</p>
+                </div>
+              </div>
+              <div className="c-offer-count__list-item">
+                <div className="c-offer-count__content">
+                  <span className="c-offer-count__title l-layout__content-title">100,000</span>
+                  <p className="c-offer-count__text">Selections per month</p>
+                </div>
+              </div>
+              <div className="c-offer-count__list-item">
+                <div className="c-offer-count__content">
+                  <span className="c-offer-count__title l-layout__content-title">40,000</span>
+                  <p className="c-offer-count__text">Markets</p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div className="c-offer-image-info">
+            <div className="c-offer-image-info__inner">
+              <div className="c-offer-image-info__layout o-layout -flex -middle">
+                <div className="c-offer-image-info__layout-item o-layout__item u-1/1 u-1/2@medium">
+                  <div className="c-offer-image-info__background">
+                    <div className="o-background">
+                      <div
+                        className="o-background__image-full"
+                        style={{
+                          backgroundImage: `url(${imageOne})`,
+                        }}
+                      />
+                    </div>
+                    <div className="o-reveal__background-reveal" />
+                  </div>
+                </div>
+                <div className="c-offer-image-info__layout-item o-layout__item u-1/1 u-1/2@medium">
+                  <div className="c-offer-image-info__content">
+                    <div className="l-layout__content-inner">
+                      <p className="l-layout__content-text">
+                        Ultimate Tournament is ready to go when you need it. The turnkey white label
+                        solution can be rapidly branded and deployed in the jurisdiction that you
+                        operate in so that customers can immediately login and begin placing bets.
+                        Ultimate Tournament is fully managed from the cloud, know your customer, and
+                        payment processing. With Ultimate Tournament, you can go from having nothing
+                        covering eSports to total custom coverage.
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              </div>
             </div>
           </div>
         </div>
