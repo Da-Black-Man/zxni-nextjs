@@ -1,3 +1,4 @@
+import phoneTwo from '../../assets/images/phone-2.png';
 const Why = () => {
   return (
     <section data-compontent="why">
@@ -21,7 +22,19 @@ const Why = () => {
                     </div>
                   </div>
                 </div>
-                <div className="c-why-image-info__layout-item o-layout__item u-1/1 u-1/2@medium"></div>
+                <div className="c-why-image-info__layout-item o-layout__item u-1/1 u-1/2@medium">
+                  <div className="c-why-image-info__phone">
+                    <div className="c-why-image-info__phone-wrap">
+                      <img className="c-why-image-info__phone-img" alt="phone2" src={phoneTwo} />
+                    </div>
+                    <div className="c-why-image-info__phone-content">
+                      <p className="c-why-image-info__phone-text">
+                        White Label
+                        <span>Rebrand with ease</span>
+                      </p>
+                    </div>
+                  </div>
+                </div>
               </div>
             </div>
           </div>
