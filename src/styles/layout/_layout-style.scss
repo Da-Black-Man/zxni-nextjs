@@ -24,6 +24,28 @@
       }
     }
 
+    &.-left {
+      @media (min-width: $from-large) {
+        left: 0;
+        padding-left: 0;
+      }
+
+      &::before {
+        @media (min-width: $from-large) {
+          content: '';
+          position: absolute;
+          display: block;
+          background-color: $bg;
+          width: calc(100% + 32rem);
+          height: 100%;
+          z-index: -1;
+          top: 0;
+          left: -18rem;
+          border-radius: 0 10px 10px 0;
+        }
+      }
+    }
+
     &-inner {
       color: #fff;
       margin-right: 2rem;
