@@ -2,7 +2,7 @@ import phoneTwo from '../../assets/images/phone-2.png';
 
 const Why = () => {
   return (
-    <section data-compontent="why">
+    <section data-compontent="why" data-scroll-section>
       <div className="c-why">
         <div className="o-container">
           <div className="c-why-image-info">

@@ -2,7 +2,7 @@ import imageTwo from '../../assets/images/image-2.jpg';
 
 const Gap = () => {
   return (
-    <section data-component="Bridging the Gap">
+    <section data-component="Bridging the Gap" data-scroll-section>
       <div className="c-gap-image-info">
         <div className="o-container">
           <div className="c-gap-image-info__inner">

@@ -5,7 +5,7 @@ import imageOne from '../../assets/images/image-1.jpg';
 
 const Offer = () => {
   return (
-    <section data-compontent="offer">
+    <section data-compontent="offer" id="intro" data-scroll-section>
       <div className="c-offer">
         <div className="o-container">
           <div className="c-offer__quote">

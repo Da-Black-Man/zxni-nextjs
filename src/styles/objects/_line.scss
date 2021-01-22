@@ -1,4 +1,3 @@
-
 .__line {
   .is-loaded & {
     opacity: 1;
@@ -11,64 +10,64 @@
   position: fixed;
   z-index: 1;
   pointer-events: none;
-  opacity: .5;
+  opacity: 0.5;
   transition: all 0.9s cubic-bezier(0.4, 0, 0.2, 1);
-    &.-v {
-      top: 0;
-      bottom: 0;
-      width: 1px;
-      background-color: $border-line
-    }
-    &.-h {
+  &.-v {
+    top: 0;
+    bottom: 0;
+    width: 1px;
+    background-color: $border-line;
+  }
+  &.-h {
+    right: 0;
+    left: 0;
+    height: 9rem;
+    &:before {
+      content: '';
+      position: absolute;
       right: 0;
       left: 0;
-      height: 9rem;
-      &:before {
-        content: "";
-        position: absolute;
-        right: 0;
-        left: 0;
-        background-color: $border-line;
-        height: 1px
-      }
+      background-color: $border-line;
+      height: 1px;
     }
-    &.-l {
-      display: none;
-      @media (min-width: $from-medium) {
-        .has-scrolled & {
-          top: 0;
-        }
-        top: 9rem;
-        left:9rem;
-        display: block
+  }
+  &.-l {
+    display: none;
+    @media (min-width: $from-medium) {
+      .has-scrolled & {
+        top: 0;
       }
+      top: 9rem;
+      left: 9rem;
+      display: block;
     }
-    &.-c {
-      display: none;
-      @media(min-width: $from-medium) {
-        left: 50%;
-        display: block;
+  }
+  &.-c {
+    display: none;
+    @media (min-width: $from-medium) {
+      left: 50%;
+      display: block;
+    }
+  }
+  &.-r {
+    display: none;
+    @media (min-width: $from-medium) {
+      .has-scrolled & {
+        top: 0;
       }
+      top: 9rem;
+      right: 9rem;
+      display: block;
     }
-    &.-r {
-      display: none;
-      @media(min-width: $from-medium) {
-        .has-scrolled & {
-          top: 0;
-        }
-        top: 9rem;
-        right: 9rem;
-        display: block
-      }
+  }
+  &.-t {
+    top: 0;
+    &:before {
+      bottom: 0;
+      transition: transform 0.45s cubic-bezier(0.4, 0, 0, 1);
+      transform: translateY(0);
     }
-    &.-t {
-      top: 0;
-      &:before {
-        bottom: 0;
-        transition: transform .45s cubic-bezier(.4,0,0,1);
-        transform: translateY(0)
-      }
-    }
+  }
 
   @media (min-width: $from-large) {
     position: absolute;

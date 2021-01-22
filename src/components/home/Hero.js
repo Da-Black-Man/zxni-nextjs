@@ -1,10 +1,15 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useContext } from 'react';
 import heroImage from '../../assets/images/hero.jpg';
+import { SmoothScrollContext } from '../../contexts/SmoothScroll.context';
 
-const test = 'https://upload.wikimedia.org/wikipedia/commons/3/3f/Fronalpstock_big.jpg';
-
-export default function Hero() {
+export default function Hero({}) {
   const [isActive, setActive] = useState('false');
+  const { scroll } = useContext(SmoothScrollContext);
+
+  const goToIntro = (event) => {
+    event.preventDefault();
+    scroll && scroll.scrollTo('#intro');
+  };
 
   const socialClick = (e) => {
     e.preventDefault();
@@ -50,8 +55,7 @@ export default function Hero() {
                 data-scroll-speed="-1"
                 style={{
                   backgroundImage: `url(${heroImage})`,
-                }}>
-              </div>
+                }}></div>
               <div className="c-main-hero__overlay" />
             </div>
           </div>
@@ -61,10 +65,8 @@ export default function Hero() {
                 <div className="c-main-hero__content">
                   <h1 className="c-main-hero__title">
                     <span className="c-main-hero__title-inner">
-                      Welcome to <br />
-{' '}
-Ultimate Tournament
-<span className="-period">.</span>
+                      Welcome to <br /> Ultimate Tournament
+                      <span className="-period">.</span>
                       <span className="c-main-hero__title-bg" />
                     </span>
                   </h1>
@@ -110,14 +112,14 @@ Ultimate Tournament
             </div>
           </div>
           <div className="__scroll u-anime -delay-4">
-            <div className="scroll-wrap">
+            <a className="scroll-wrap" href="#intro" onClick={goToIntro}>
               <div className="scroll-text">Scroll to explore.</div>
               <div className="scroll-arrow">
                 <svg>
                   <use xlinkHref="#svg-arrow-long" />
                 </svg>
               </div>
-            </div>
+            </a>
           </div>
           <div className="c-main-hero__social u-anime -delay-4">
             <ul className="c-main-hero__social-list">
