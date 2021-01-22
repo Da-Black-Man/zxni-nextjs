@@ -62,7 +62,7 @@ export default function Hero({}) {
           <div className="c-main-hero__container o-container">
             <div className="c-main-hero__layout o-layout -flex -middle">
               <div className="c-main-hero__layout-item o-layout__item u-3/4@medium">
-                <div className="c-main-hero__content">
+                <div className="c-main-hero__content" data-scroll data-scroll-speed="2">
                   <h1 className="c-main-hero__title">
                     <span className="c-main-hero__title-inner">
                       Welcome to <br /> Ultimate Tournament

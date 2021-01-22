@@ -99,8 +99,16 @@ const Offer = () => {
             <div className="c-offer-image-info__inner">
               <div className="c-offer-image-info__layout o-layout -flex -middle">
                 <div className="c-offer-image-info__layout-item o-layout__item u-1/1 u-1/2@medium">
-                  <div className="c-offer-image-info__background">
-                    <div className="o-background">
+                  <div
+                    className="c-offer-image-info__background o-reveal"
+                    data-scroll
+                    data-scroll-class="is-reveal"
+                    data-scroll-offset="0.3">
+                    <div
+                      className="o-background"
+                      data-scroll
+                      data-scroll-speed="-1"
+                      data-scroll-position="middle">
                       <div
                         className="o-background__image-full"
                         style={{

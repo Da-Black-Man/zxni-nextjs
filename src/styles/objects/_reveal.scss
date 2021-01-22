@@ -20,7 +20,7 @@
       transition-delay: 0s;
       opacity: 1;
 
-      &.-blur  {
+      &.-blur {
         transform: translate3d(0, 0, 0) scale(1);
         transition-delay: 0s;
         opacity: 1;
@@ -32,7 +32,6 @@
       transition: transform 0.9s cubic-bezier(0.4, 0, 0.2, 1);
       transform: translate3d(0, 100%, 0) scale(1);
       background-size: cover;
-
     }
     position: absolute;
     top: 0;
@@ -47,9 +46,6 @@
     transform: translate3d(0, 100%, 0);
   }
 }
-
-
-
 
 // <div class="o-reveal" data-scroll data-scroll-class="is-reveal">
 // <div class="o-background" data-scroll data-scroll-speed="-1" data-scroll-position="middle">
